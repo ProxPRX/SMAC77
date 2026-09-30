@@ -196,10 +196,14 @@ footer a {
     text-decoration: none;
 }
 
-/* --- Ajustement du logo pour les téléphones --- */
+/* --- Ajustement de la hauteur exacte pour supprimer les bandes --- */
 @media (max-width: 768px) {
     .logo-container {
-        height: 90px; /* Réduit la hauteur du bloc sur mobile pour enlever les marges */
-        background-size: cover; /* L'image s'adapte pour remplir tout l'espace sans bandes grises */
+        width: 100%;
+        /* On calcule la hauteur proportionnellement à la largeur de l'écran (800 / 145) */
+        height: calc(100vw * 145 / 800); 
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
