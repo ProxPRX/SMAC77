@@ -1,0 +1,9 @@
+rouge 		#FF0000
+bleu foncé 1	#0000FF
+bleu foncé 2 	#0000AA
+blanc/bleu 	#DFDFFF
+vert 		#008000
+noir 		#000000
+blanc		#FFFFFF
+gris 1		#AAAAAA
+gris 2 		#E8E8E8 

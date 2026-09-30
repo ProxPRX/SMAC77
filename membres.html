@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Espace Membres du SMAC 77 : galeries photos, voyages, et réalisations de nos pilotes.">
+    <title>Membres - SMAC 77</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/membres.css">
+</head>
+<body>
+
+    <!-- EN-TÊTE -->
+    <header>
+        <div class="logo-container">
+            <a href="index.html" class="logo-link"><span class="sr-only">SMAC 77 - Seine et Marne Aéromodélisme Club</span></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="club.html">Le Club</a></li>
+                <li><a href="activites.html">Activités</a></li>
+                <li><a href="membres.html" class="active">Membres</a></li>
+                <li><a href="liens.html">Liens</a></li>
+                <li><a href="forum.html"/">Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNIÈRE HÉROS -->
+    <section class="hero membres-hero">
+        <div class="hero-content">
+            <h2>Espace Membres</h2>
+            <p>Partagez vos photos, vos voyages et vos plus belles réalisations.</p>
+        </div>
+    </section>
+
+    <!-- SOUS-MENU COLLANT -->
+    <nav id="subnav" class="subnav">
+        <ul>
+            <li><a href="#photos" class="subnav-link active">📸 Photos & Voyages</a></li>
+            <li><a href="#realisations" class="subnav-link">🛠️ Réalisations</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENU PRINCIPAL -->
+    <main>
+        
+        <!-- SECTION : PHOTOS -->
+        <section id="photos" class="membres-section">
+            <h2>Photos de vacances</h2>
+            <p style="margin-bottom: 30px; font-size: 1.1rem; color: #555;">Nos membres font aussi voler leurs machines autour du globe !</p>
+            
+            <div class="gallery-block">
+                <h3>✈️ Jean Paul Schrantz en Californie</h3>
+                <p>Un amical salut à tous depuis le terrain des <strong>Silent Electric Flyers of San Diego</strong>, au bord du Pacifique près de Seaworld, avec mon Easy Star photographe en config "photo".</p>
+                
+                <!-- Grille Photo -->
+                <div class="gallery-grid">
+                    <div class="gallery-item placeholder-img">Photo 1 (San Diego)</div>
+                    <div class="gallery-item placeholder-img">Photo 2 (Easy Star)</div>
+                    <div class="gallery-item placeholder-img">Photo 3 (Piste)</div>
+                    <div class="gallery-item placeholder-img">Photo 4 (Paysage)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION : RÉALISATIONS -->
+        <section id="realisations" class="membres-section">
+            <h2>Les réalisations des membres</h2>
+            <p style="margin-bottom: 30px; font-size: 1.1rem; color: #555;">Dans l'atelier du SMAC 77, la passion prend forme.</p>
+            
+            <div class="gallery-block">
+                <h3>🛠️ Les modèles de Tito</h3>
+                <p>Quelques clichés détaillés du dernier modèle de Tito, assemblé et réglé avec soin.</p>
+                
+                <!-- Grille Photo -->
+                <div class="gallery-grid">
+                    <div class="gallery-item placeholder-img">Photo Tito 1</div>
+                    <div class="gallery-item placeholder-img">Photo Tito 2</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+        <p>&copy; SMAC 77 - Seine et Marne Aéromodélisme Club 77</p>
+        <p>Pour toute information : <a href="mailto:info@smac77.com">info@smac77.com</a></p>
+    </footer>
+
+    <!-- SCRIPT POUR LE MENU SCROLL -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("main section");
+            const navLinks = document.querySelectorAll(".subnav-link");
+
+            function updateMenu() {
+                let current = "";
+                const scrollPosition = window.scrollY + 150; 
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+                    current = sections[sections.length - 1].getAttribute("id");
+                }
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (current && link.getAttribute("href") === "#" + current) {
+                        link.classList.add("active");
+                    }
+                });
+
+                if (!current && window.scrollY < 100) {
+                    navLinks[0].classList.add("active");
+                }
+            }
+
+            window.addEventListener("scroll", updateMenu);
+            updateMenu();
+        });
+    </script>
+</body>
+</html>
