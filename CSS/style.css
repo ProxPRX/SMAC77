@@ -195,3 +195,11 @@ footer a {
     color: var(--smac-rouge);
     text-decoration: none;
 }
+
+/* --- Ajustement du logo pour les téléphones --- */
+@media (max-width: 768px) {
+    .logo-container {
+        height: 90px; /* Réduit la hauteur du bloc sur mobile pour enlever les marges */
+        background-size: cover; /* L'image s'adapte pour remplir tout l'espace sans bandes grises */
+    }
+}
