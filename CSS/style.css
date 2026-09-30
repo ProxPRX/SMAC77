@@ -40,6 +40,7 @@ header {
     max-width: 800px; 
     margin: 0 auto; 
     position: relative;
+    background-color: lime;
 }
 
 .logo-link {
