@@ -1,0 +1,94 @@
+/* --- HÉROS SPÉCIFIQUE CLUB --- */
+.club-hero {
+    padding: 60px 20px;
+}
+
+/* --- SOUS-MENU COLLANT --- */
+.subnav {
+    background-color: var(--smac-gris-clair);
+    border-bottom: 1px solid var(--smac-gris-bordure);
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.subnav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.subnav li {
+    margin: 0 15px;
+}
+
+.subnav a {
+    color: var(--smac-bleu-fonce);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent; 
+    transition: all 0.3s ease;
+}
+
+.subnav a:hover,
+.subnav a.active {
+    color: var(--smac-rouge);
+    border-bottom: 3px solid var(--smac-rouge); 
+}
+
+/* --- SECTIONS DU CLUB --- */
+/* --- SECTIONS DU CLUB --- */
+.club-section {
+    margin-bottom: 60px;
+    scroll-margin-top: 80px; /* Force l'arrêt du scroll 80px avant le haut pour laisser la place au menu collant */
+}
+
+.club-section h3.subtitle {
+    margin-top: 20px; 
+    color: var(--smac-bleu-fonce);
+}
+
+.club-list {
+    margin-left: 20px; 
+    margin-top: 10px; 
+    margin-bottom: 20px;
+}
+
+.info-box-title-red {
+    color: var(--smac-rouge) !important;
+}
+
+/* --- BLOC INSCRIPTION --- */
+.join-us {
+    background-color: var(--smac-gris-clair);
+    padding: 40px;
+    border-radius: 8px;
+    border: 2px solid var(--smac-rouge);
+    margin-bottom: 60px;
+}
+
+.join-us h2 {
+    border-bottom: none; 
+    margin-bottom: 10px;
+}
+
+.join-us-action {
+    text-align: center; 
+    margin-top: 30px;
+}
+
+.join-us-action .btn-primary {
+    font-size: 1.1rem; 
+    padding: 15px 30px;
+}
+
+.join-us-footer {
+    text-align: center; 
+    margin-top: 20px; 
+    font-size: 0.9em;
+}

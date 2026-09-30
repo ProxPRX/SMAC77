@@ -1,0 +1,69 @@
+/* --- HÉROS SPÉCIFIQUE LIENS --- */
+.liens-hero {
+    padding: 60px 20px;
+}
+
+/* --- SECTION LIENS --- */
+.links-section {
+    margin-bottom: 60px;
+}
+
+.links-grid {
+    display: grid;
+    /* Crée 2 colonnes sur grand écran, 1 sur mobile */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.link-category {
+    background: var(--smac-blanc);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--smac-rouge);
+}
+
+.link-category h3 {
+    color: var(--smac-bleu-fonce);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--smac-gris-bordure);
+}
+
+.styled-link-list {
+    list-style: none;
+}
+
+.styled-link-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--smac-gris-bordure);
+}
+
+/* Enlève la bordure du tout dernier lien de la liste */
+.styled-link-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.styled-link-list a {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: var(--smac-bleu-fonce);
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.styled-link-list a:hover {
+    color: var(--smac-rouge);
+    text-decoration: underline;
+}
+
+.styled-link-list p {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+}

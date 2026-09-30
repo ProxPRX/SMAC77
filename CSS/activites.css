@@ -1,0 +1,120 @@
+/* --- HÉROS SPÉCIFIQUE ACTIVITÉS --- */
+.activites-hero {
+    padding: 60px 20px;
+}
+
+/* --- SECTION NOS PRATIQUES --- */
+.practices-section {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.practice-card {
+    background-color: var(--smac-fond);
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid var(--smac-gris-bordure);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.practice-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--smac-rouge);
+}
+
+.practice-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.practice-card h3 {
+    color: var(--smac-bleu-fonce);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* --- SECTION ÉVÉNEMENTS --- */
+.events-section {
+    margin-bottom: 60px;
+}
+
+.events-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.event-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--smac-blanc);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--smac-gris-bordure);
+}
+
+/* À partir des tablettes, l'image et le texte se mettent côte à côte */
+@media (min-width: 768px) {
+    .event-item {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    /* Une fois sur deux, on inverse le sens image/texte pour casser la monotonie ! */
+    .event-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .event-image {
+        flex: 1;
+        min-height: 250px;
+    }
+
+    .event-details {
+        flex: 1;
+        padding: 40px !important;
+    }
+}
+
+.event-image {
+    height: 250px;
+}
+
+.placeholder-img {
+    background-color: var(--smac-gris-bordure);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.event-details {
+    padding: 25px;
+}
+
+.event-date {
+    display: inline-block;
+    background-color: var(--smac-rouge);
+    color: var(--smac-blanc);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.event-details h3 {
+    color: var(--smac-bleu-fonce);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}

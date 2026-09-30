@@ -1,0 +1,101 @@
+/* --- HÉROS SPÉCIFIQUE MEMBRES --- */
+.membres-hero {
+    padding: 60px 20px;
+}
+
+/* --- SOUS-MENU COLLANT (Réutilisation du style Club) --- */
+.subnav {
+    background-color: var(--smac-gris-clair);
+    border-bottom: 1px solid var(--smac-gris-bordure);
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.subnav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.subnav li {
+    margin: 0 15px;
+}
+
+.subnav a {
+    color: var(--smac-bleu-fonce);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent; 
+    transition: all 0.3s ease;
+}
+
+.subnav a:hover,
+.subnav a.active {
+    color: var(--smac-rouge);
+    border-bottom: 3px solid var(--smac-rouge); 
+}
+
+/* --- SECTIONS DE LA PAGE --- */
+.membres-section {
+    margin-bottom: 60px;
+    scroll-margin-top: 80px; /* Pour le défilement du menu collant */
+}
+
+.gallery-block {
+    background: var(--smac-blanc);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--smac-gris-bordure);
+    margin-bottom: 40px;
+}
+
+.gallery-block h3 {
+    color: var(--smac-rouge);
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--smac-gris-bordure);
+    padding-bottom: 10px;
+}
+
+.gallery-block p {
+    margin-bottom: 20px;
+}
+
+/* --- GRILLES PHOTOS MODERNES --- */
+.gallery-grid {
+    display: grid;
+    /* Crée automatiquement des colonnes de minimum 250px de large */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    background-color: var(--smac-gris-bordure);
+    border-radius: 6px;
+    overflow: hidden;
+    height: 200px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Effet de zoom léger au survol d'une photo */
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.placeholder-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}

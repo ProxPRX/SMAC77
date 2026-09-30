@@ -1,0 +1,86 @@
+/* --- VIDÉO ACCUEIL --- */
+.video-section {
+    background: var(--smac-blanc);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.video-placeholder {
+    background-color: #ddd;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #666;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* --- CARTES ACTUALITÉS --- */
+.news-section {
+    margin-bottom: 40px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.news-card {
+    background: var(--smac-blanc);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--smac-gris-bordure);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.placeholder-img {
+    height: 180px;
+    background-color: var(--smac-gris-bordure);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-weight: bold;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-date {
+    display: block;
+    color: var(--smac-rouge);
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.news-content h3 {
+    color: var(--smac-bleu-fonce);
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--smac-bleu-fonce);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    color: var(--smac-rouge);
+}
