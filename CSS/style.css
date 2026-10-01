@@ -183,7 +183,7 @@ h2 {
     margin-left: 20px;
     line-height: 1.8;
 }
-/**/
+
 /* --- PIED DE PAGE --- */
 footer {
     text-align: center;
@@ -196,6 +196,7 @@ footer a {
     color: var(--smac-rouge);
     text-decoration: none;
 }
+
 
 /* --- Ajustement de la hauteur exacte pour supprimer les bandes --- */
 @media (max-width: 768px) {

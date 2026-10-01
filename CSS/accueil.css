@@ -9,16 +9,14 @@
     text-align: center;
 }
 
-.video-placeholder {
-    background-color: #ddd;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    color: #666;
-    font-style: italic;
-    margin-top: 20px;
+.local-video {
+    width: 100%;
+    max-width: 800px; /* Empêche la vidéo de devenir géante sur un grand écran */
+    margin: 20px auto 0 auto; /* Centre la vidéo et met un espace au-dessus */
+    display: block;
+    border-radius: 8px; /* Bords arrondis pour le design */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Petite ombre élégante */
+    background-color: var(--smac-noir); /* Fond noir pendant le chargement */
 }
 
 /* --- CARTES ACTUALITÉS --- */
