@@ -184,6 +184,48 @@ h2 {
     line-height: 1.8;
 }
 
+/* --- BOUTON RETOUR EN HAUT --- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--smac-rouge);
+    color: var(--smac-blanc);
+    border: none;
+    border-radius: 50%; /* Bouton parfaitement rond */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    
+    /* Caché par défaut (invisible et légèrement vers le bas) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000; /* Assure que le bouton est toujours par-dessus le reste */
+}
+
+/* Classe ajoutée par le JS pour le faire apparaître */
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--smac-bleu-fonce);
+    transform: translateY(-5px); /* Petit bond au survol */
+}
+
+.back-to-top svg {
+    width: 24px;
+    height: 24px;
+}
+
 /* --- PIED DE PAGE --- */
 footer {
     text-align: center;
