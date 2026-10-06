@@ -35,10 +35,18 @@
     transition: all 0.3s ease;
 }
 
-.subnav a:hover,
+/* 1. L'état actif (géré par le défilement Javascript pour tous les écrans) */
 .subnav a.active {
     color: var(--smac-rouge);
     border-bottom: 3px solid var(--smac-rouge); 
+}
+
+/* 2. L'état de survol (activé UNIQUEMENT s'il y a un vrai curseur de souris) */
+@media (hover: hover) {
+    .subnav a:hover {
+        color: var(--smac-rouge);
+        border-bottom: 3px solid var(--smac-rouge); 
+    }
 }
 
 /* --- SECTIONS DU CLUB --- */
